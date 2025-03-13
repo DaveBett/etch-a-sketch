@@ -8,3 +8,15 @@ function makeDivs(numDivs) {
         }
     }
 makeDivs(256);
+
+document.body.addEventListener('mouseover', e => {
+    let button = e.target.closest('div');
+    if (!button) { return; }
+    button.style.backgroundColor = 'khaki';
+  });
+  
+  document.body.addEventListener('mouseout', e => {
+    let button = e.target.closest('div');
+    if (!button) { return; }
+    button.style.backgroundColor = '';
+  });
