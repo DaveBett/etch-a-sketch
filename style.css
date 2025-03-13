@@ -9,10 +9,10 @@ body {
 
 #container {
     display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    width: 675px;
-    height: 675px;
+    flex-direction: row;
+    justify-content: space-around;
+    width: 800px;
+    height: 800px;
 }
 
 .passed {
@@ -20,6 +20,13 @@ body {
 }
 
 .square {
-    padding: 20px;
-    border: 1px solid black; 
+    border: 1px solid black;
+    height: auto;
+    flex: 1 0 auto;
+    display: flex;
+    flex-direction: column;
+}
+
+.square>div>* {
+    flex: 1;
 }
